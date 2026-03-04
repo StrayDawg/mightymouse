@@ -255,6 +255,7 @@ def getUserDetails() -> dict:
     )
     return userinfo
 
+
 def downloadBatch(ids: list):
     """Download torrents from MAM in batches and extract if configured.
 
@@ -875,10 +876,10 @@ def warn_on_unsat_stg_threshold(
     unsat_torrents["rows"] = sorted(
         unsat_torrents.get("rows", []), key=lambda x: x.get("STG_seconds", float("inf"))
     )   
-    if config.DEBUG:
+    if config.DEBUG or 1 == 1:
         print("Unsaturated torrents sorted by STG (closest to saturation first):")
-        for torrent in unsat_torrents.get("rows", [])[:1]:  # print top 1 closest to saturation
-            print(f"{torrent['title']} - STG: {torrent['STG']} - STG_seconds: {torrent.get('STG_seconds', 'N/A')}")
+    for torrent in unsat_torrents.get("rows", [])[:1]:  # print torrent closest to saturation
+        print(f"{torrent['title']} - STG: {torrent['STG']} - STG_seconds: {torrent.get('STG_seconds', 'N/A')}")
     return torrent["STG_seconds"] if unsat_torrents.get("rows", []) else 0
 
 def main():
