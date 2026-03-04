@@ -63,29 +63,23 @@ See `config.py` for all available settings including:
 - Sample Output
 
 ```
-User: ********* - Class: VIP - Bonus Points: 11853
+PS O:\> python .\mightymouse.py
+User: ************ - Class: VIP - Bonus Points: 766
 ***** Checking Torrent Status *****
-You are seeding 146 unsaturated torrents. (Limit: 150 for VIP)
-You are seeding 472 saturated torrents
+You are seeding 150 unsaturated torrents. (Limit: 150 for VIP)
+You are seeding 864 saturated torrents
 You are leeching 0 torrents
-Unsaturated limit not reached: Can get 4 more torrents
+Unsaturated limit reached!
 User is VIP, searching for free+VIP torrents
-getting torrents... 0 - 19
-1223304 - Predestination - 629.1 MiB - 0 - 1 - Adding torrent ID
-1223303 - Acceptance and Commitment Therapy: 100 Key Points and Techniques, 2nd Edition - 2.6 MiB - 0 - 1 - Adding torrent ID
-1223279 - The Nights Are Quiet in Tehran - 634.0 KiB - 0 - 1 - Adding torrent ID
-1223278 - A Place Both Wonderful and Strange: The Extraordinary Untold History of Twin Peaks - 26.2 MiB - 0 - 1 - Adding torrent ID
-Total torrent IDs fetched: 4
-Torrent IDs: ['1223279', '1223304', '1223278', '1223303']
-Downloaded: storage\batch_1772028358.6131032.zip
 ***** Fixing categories in qBittorrent *****
 ***** Checking VIP Status *****
-VIP expires at: 2026-05-25 13:13:18 UTC
-VIP time remaining (weeks): 12.709 Purchasable (weeks): 0.148 cost (points): 185.0
-Minimum VIP purchase is 1 day, skipping...
-Unsaturated torrents sorted by STG (closest to saturation first):
-Higher Magic - STG: 2:38 - STG_seconds: 158
-Next saturation complete in 158 seconds
-***** Fixing categories in qBittorrent *****
-Next run scheduled in 458 seconds
+VIP expires at: 2026-06-02 12:50:54 UTC
+VIP time remaining (weeks): 12.85 Purchasable (weeks): 0.007 cost (points): 8.75
+Minimum VIP purchase is 1 week, skipping...
+***** Checking Millionaire's Vault Donation Status *****
+You have 766 seedbonus points, you need 2000 for donation (MAM Minimum for automation)
+Torrent closest to finishing saturation: Fallschirmjager: Elite German Paratroops In World War II - STG: 6:06:09 - STG_seconds: 21969
+Next saturation completes in 21969 seconds.
+Next run scheduled in 3600 seconds
+Next run in 2622s [################--------------------------------------------]
 ```
