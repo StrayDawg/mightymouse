@@ -876,10 +876,9 @@ def warn_on_unsat_stg_threshold(
     unsat_torrents["rows"] = sorted(
         unsat_torrents.get("rows", []), key=lambda x: x.get("STG_seconds", float("inf"))
     )   
-    if config.DEBUG or 1 == 1:
-        print("Unsaturated torrents sorted by STG (closest to saturation first):")
+    
     for torrent in unsat_torrents.get("rows", [])[:1]:  # print torrent closest to saturation
-        print(f"{torrent['title']} - STG: {torrent['STG']} - STG_seconds: {torrent.get('STG_seconds', 'N/A')}")
+        print("Torrent closest to finishing saturation: " + f"{torrent['title']} - STG: {torrent['STG']} - STG_seconds: {torrent.get('STG_seconds', 'N/A')}")
     return torrent["STG_seconds"] if unsat_torrents.get("rows", []) else 0
 
 def main():
@@ -945,7 +944,9 @@ def main():
         nextrun = warn_on_unsat_stg_threshold(
             os.path.join("storage", "unsat_torrents.json")
         )
-        print(f"Next saturation complete in {nextrun} seconds. Adding 5 minutes buffer to next run time to allow MAM to update torrent status before next check.")
+        print(f"Next saturation completes in {nextrun} seconds.")
+        if nextrun < config.RUN_INTERVAL:
+            print("Adding extra 5 minute buffer to next run time to allow MAM to update torrent status before next check.")
 
         # Manage qBittorrent categories again if downloads were triggered
         if didDownload:
