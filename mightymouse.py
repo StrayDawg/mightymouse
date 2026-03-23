@@ -849,7 +849,7 @@ def warn_on_unsat_stg_threshold(
 
     for torrent in unsat_torrents.get("rows", []):
         if "STG" in torrent:
-            # Covert "2d 04:12:00" to seconds
+            # Convert "2d 04:12:00" to seconds
             stg_str = torrent["STG"]
             stg_seconds = 0
             if "d" in stg_str:

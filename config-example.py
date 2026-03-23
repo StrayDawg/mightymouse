@@ -18,7 +18,7 @@ QBITTORRENT_USERNAME = "admin" # qBittorrent username
 QBITTORRENT_PASSWORD = "admin" # qBittorrent password
 
 # Spend Bonus Points?
-# DONATE_TO_POT can lock your account if you don't have yuour password correct, so make sure to set MAM_USER_PASS before setting DONATE_TO_POT to True
+# DONATE_TO_POT can lock your account if you don't have your password correct, so make sure to set MAM_USER_PASS before setting DONATE_TO_POT to True
 DONATE_TO_POT = False # Automatically donate to the pot once a cycle or day to get FL wedges (requires Selenium and ChromeDriver, leave False to disable) (BROKEN CURRENTLY, DO NOT ENABLE)
 POT_INTERVAL = "CYCLE" # Donate to pot once per cycle.
 #POT_INTERVAL = "DAILY" # Donate to pot once a day.
@@ -44,7 +44,7 @@ DEBUG = False
 CAT_UNSAT = "MAM_UNSAT" # qBittorrent category for unsaturated torrents
 CAT_SAT = "MAM_SAT" # qBittorrent category for saturated torrents
 
-# MAM Torrent search criteria (shouldn't have to chage these, but you can if you want to customize the search)
+# MAM Torrent search criteria (shouldn't have to change these, but you can if you want to customize the search)
 # More information: https://www.myanonamouse.net/api/endpoint.php/1/tor/js/loadSearchJSONbasic.php
 SKIP = ['sSat', 'unsat', 'leeching'] # sSat, unsat, inactHnr, inactUnsat, upInact, inactSat, seedUnsat, seedHnr, leeching, upAct
 SEARCH = { 
