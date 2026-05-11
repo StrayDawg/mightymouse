@@ -548,7 +548,7 @@ def donate_to_pot():
                     return
             
             # Check if already donated today by looking for "have already" in million_info_title
-            if "have already" in million_info_title:
+            if "have already" in str(million_info_title):
                 print("Already donated today, skipping donation attempt")
                 driver.quit()
                 return
@@ -562,7 +562,7 @@ def donate_to_pot():
                     time.sleep(10)
                     million_info_element = driver.find_element(By.ID, "millionInfo")
                     million_info_title = million_info_element.get_attribute("title")
-                    if "have already" in million_info_title:
+                    if "have already" in str(million_info_title):
                         print("Donation successful!")
                     else:
                         print(
