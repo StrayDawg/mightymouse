@@ -1,4 +1,4 @@
-requests==2.32.3
-selenium==4.27.1
-schedule==1.2.0
-qbittorrent-api==2023.3.13
+requests==2.34.2
+selenium==4.44.0
+schedule==1.2.2
+qbittorrent-api==2026.5.1
