@@ -65,23 +65,26 @@ See `config.py` for all available settings including:
 - Sample Output
 
 ```text
-PS O:\> python .\mightymouse.py
-User: ************ - Class: VIP - Bonus Points: 766
+PS O:\source\repos\mightymouse> python .\mightymouse.py
+User: ****** - Class: VIP - Bonus Points: 14340
 ***** Checking Torrent Status *****
-You are seeding 150 unsaturated torrents. (Limit: 150 for VIP)
-You are seeding 864 saturated torrents
+You are seeding 145 unsaturated torrents. (Limit: 150 for VIP)
+You are seeding 4163 saturated torrents
 You are leeching 0 torrents
-Unsaturated limit reached!
+Unsaturated limit reached! Cannot download new torrents until you have fewer than 145 unsaturated torrents.
 User is VIP, searching for free+VIP torrents
 ***** Fixing categories in qBittorrent *****
 ***** Checking VIP Status *****
-VIP expires at: 2026-06-02 12:50:54 UTC
-VIP time remaining (weeks): 12.85 Purchasable (weeks): 0.007 cost (points): 8.75
+VIP expires at: 2026-08-11 20:40:44 UTC
+VIP time remaining (weeks): 12.57 Purchasable (weeks): 0.287 cost (points): 358.75
 Minimum VIP purchase is 1 week, skipping...
 ***** Checking Millionaire's Vault Donation Status *****
-You have 766 seedbonus points, you need 2000 for donation (MAM Minimum for automation)
-Torrent closest to finishing saturation: Fallschirmjager: Elite German Paratroops In World War II - STG: 6:06:09 - STG_seconds: 21969
-Next saturation completes in 21969 seconds.
-Next run scheduled in 3600 seconds
-Next run in 2622s [################--------------------------------------------]
+Not a new cycle: skipping donation attempt
+***** Checking Buy Upload Status *****
+You have 14340 seedbonus points, you need 25000 for 50GB (MAM Minimum for automation)
+Torrent closest to finishing saturation: The Stolen Princess - STG: 1:39:39 - STG_seconds: 5979
+Next saturation completes in 5979 seconds.
+Adding extra 5 minute buffer to next run time to allow MAM to update torrent status before next check.
+Next run scheduled in 6279 seconds
+Next run in 6123s [#-----------------------------------------------------------]
 ```
