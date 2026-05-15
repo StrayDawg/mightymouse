@@ -10,7 +10,7 @@
     On the sea or on the land,
     He gets the situation well in hand
 
-    So though we are in danger, we never despair
+    So though we are in danger, we never despair0
     Cause we know that where there's danger he is there!
     (He is there, on the land, on the sea, in the air!)
 
@@ -652,9 +652,9 @@ def fetch_and_download_torrents(userinfo: dict):
     for torrent in leeching["rows"]:
         leechingTorrents.append(torrent["id"])
     leechingCount = len(leeching["rows"])
-    unsatLimit = userinfo["advanced"]["unsat"]["limit"]
+    unsatLimit = userinfo["advanced"]["unsat"]["limit"] - config.MAM_OPEN_SLOTS  # Leave open slots to avoid hitting the limit exactly
     if unsatLimit and unSatCount >= unsatLimit:
-        print("Unsaturated limit reached!")
+        print(f"Unsaturated limit reached! Cannot download new torrents until you have fewer than {unsatLimit} unsaturated torrents.")
         canDownload = 0
     elif unsatLimit:
         print(
