@@ -106,7 +106,7 @@ See `config.py` for all available settings including:
 - `AUTO_EXTRACT_DIR`, `AUTO_DEL_BATCH`: Control torrent ZIP extraction and cleanup
 - `DEBUG`: Enable verbose logging
 
-- Sample Output
+## Sample Output
 
 ```text
 PS O:\source\repos\mightymouse> python .\mightymouse.py
