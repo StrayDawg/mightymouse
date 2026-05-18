@@ -50,6 +50,7 @@ SEARCH = {
         "searchType": "fl", # fl-VIP, fl, nVIP, VIP, nMeta, inactive, active, all
         "minSize": 0, # 0 to disable
         "maxSize": 0, # 0 to disable
+        "unit": 1048576, # Size unit in bytes (1048576 for MB, 1073741824 for GB)
         "startNumber": 0,
     },
     "perpage":20
